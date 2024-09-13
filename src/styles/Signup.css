@@ -1,0 +1,78 @@
+/* Container for the form */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styling */
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  outline: none; /* Remove focus outline */
+  margin: 0; /* Remove any extra margin */
+}
+
+.auth-btn:hover {
+  background-color: #3498db;
+}
+
+/* Toggle button styling */
+.toggle-btn {
+  background-color: transparent;
+  color: #2980b9;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  outline: none; /* Remove focus outline */
+  margin: 0; /* Remove any extra margin */
+}
+
+.toggle-btn:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+/* Back to homepage link */
+.back-home-container {
+  margin-top: 20px;
+}
+
+.back-home-link {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.back-home-link:hover {
+  text-decoration: underline;
+}
