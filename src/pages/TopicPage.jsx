@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaArrowsAlt, FaCube } from 'react-icons/fa';
+import { FaArrowsAlt, FaCube, FaGamepad } from 'react-icons/fa'; // Added FaGamepad icon for game
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../styles/TopicPage.css';
+
 function TopicPage() {
   const navigate = useNavigate(); // Initialize navigate for routing
 
@@ -81,6 +82,17 @@ function TopicPage() {
               onClick={() => navigate('/explore-3d')}  // Navigate to new page
             >
               <FaCube /> Explore in 3D
+            </motion.button>
+
+            {/* Navigate to Game Page */}
+            <motion.button
+              className="explore-button"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
+              onClick={() => navigate('/game')}  // Navigate to game page
+            >
+              <FaGamepad /> Play Game
             </motion.button>
           </div>
         </motion.div>

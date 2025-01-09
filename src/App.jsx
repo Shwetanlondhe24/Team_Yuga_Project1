@@ -8,6 +8,7 @@ import Signup from "./pages/Signup"; // Signup page component
 import LearningSessions from "./pages/LearningSessions"; // AI Chatbot page component
 import ModelViewerWithSuspense from "./pages/GLBModelViewer"; // 3D Model Viewer page component
 import Chatbot from "./components/Chatbot"; // Import the Chatbot component
+import GamePage from "./pages/GamePage"; // Import the Game page
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./styles/TopicPage.css"; // Import the styles for TopicPage
 
@@ -39,6 +40,9 @@ function App() {
 
         {/* AI Chatbot component route */}
         <Route path="/chatbot" element={<Chatbot />} />
+
+        {/* Game Page Route */}
+        <Route path="/game" element={<GamePage />} />
       </Routes>
     </Router>
   );

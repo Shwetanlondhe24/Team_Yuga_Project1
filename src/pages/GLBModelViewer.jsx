@@ -1,10 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const ModelViewer = () => {
   const mountRef = useRef(null);
+  const audioRef = useRef(null); // Reference to the audio element
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false); // Track audio state
 
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -89,7 +91,29 @@ const ModelViewer = () => {
     };
   }, []);
 
-  return <div ref={mountRef} style={{ width: '100vw', height: '100vh' }} />;
+  // Function to handle audio play/pause
+  const handleAudioToggle = () => {
+    if (isAudioPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsAudioPlaying(!isAudioPlaying); // Toggle state
+  };
+
+  return (
+    <>
+      <div ref={mountRef} style={{ width: '100vw', height: '100vh' }} />
+      
+      {/* Audio controls */}
+      <div style={{ position: 'absolute', bottom: '20px', left: '20px' }}>
+        <audio ref={audioRef} src="/public/audio/audio.mp3" />
+        <button onClick={handleAudioToggle}>
+          {isAudioPlaying ? 'Pause Audio' : 'Play Audio'}
+        </button>
+      </div>
+    </>
+  );
 };
 
 export default ModelViewer;

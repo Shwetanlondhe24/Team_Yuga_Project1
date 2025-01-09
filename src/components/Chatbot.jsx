@@ -7,8 +7,9 @@ import "./Chatbot.css"; // Your CSS styling
 const IT_KEYWORDS = [
   "computer", "IT", "software", "hardware", "programming", "coding", 
   "technology", "network", "database", "algorithm", "security", "system",
+  "djistra algorithm", "OSI model",
   // Data Structures and Algorithms (DSA)
-  "data structure", "algorithm", "sorting", "searching", "linked list",
+  "data structure", "array", "sorting", "searching", "linked list",
   "stack", "queue", "tree", "graph", "hashing", "dynamic programming",
   // Object-Oriented Programming (OOP)
   "object-oriented", "oop", "class", "object", "inheritance", "polymorphism",

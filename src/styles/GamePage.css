@@ -1,0 +1,26 @@
+/* Container for the whole game page */
+.game-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Gap between instructions and game */
+    margin-top: 40px;
+  }
+  
+  /* Styling for the instructions section */
+  .instructions-container {
+    max-width: 300px;
+    text-align: left;
+    padding: 20px;
+    background-color: #3498db;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the game grid container */
+  .game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
